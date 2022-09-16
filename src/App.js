@@ -5,6 +5,7 @@ import Register from './login/Register';
 import RequireAuth from './login/RequireAuth';
 import AddPet from './Pages/AddPet';
 import Home from './Pages/Home';
+import ManageInfo from './Pages/ManageInfo';
 import Header from './shared/Header';
 
 function App() {
@@ -20,6 +21,12 @@ function App() {
         <Route path='/information' element={
           <RequireAuth>
             <AddPet></AddPet>
+          </RequireAuth>
+        }></Route>
+
+        <Route path='/manage' element={
+          <RequireAuth>
+            <ManageInfo></ManageInfo>
           </RequireAuth>
         }></Route>
 
